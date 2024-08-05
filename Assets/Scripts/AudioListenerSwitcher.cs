@@ -38,8 +38,8 @@ public class AudioListenerSwitcher : MonoBehaviour
             {
                 _audioListeners[i].enabled = false;
             }
+            StartCoroutine(AudioListenerSwitchCoroutine());
         }
-        StartCoroutine(AudioListenerSwitchCoroutine());
 
     }
 
