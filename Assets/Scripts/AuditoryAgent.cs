@@ -23,6 +23,7 @@ public class AuditoryAgent : Agent
 
     public override void OnActionReceived(ActionBuffers actions)
     {
+        // Get whether the agent should move forward or backward and rotate left or right
         float motion = actions.ContinuousActions[0];
         float rotation = actions.ContinuousActions[1];
 
@@ -64,6 +65,7 @@ public class AuditoryAgent : Agent
         }
     }
 
+    // Normalize the audio data such that all values are between -1 and 1
     public float[] NormalizeArray(float[] array)
     {
         float maximumAmplitude = array.Max(Math.Abs);
@@ -77,6 +79,7 @@ public class AuditoryAgent : Agent
         return array.Select(x => x / maximumAmplitude).ToArray();
     }
 
+    // Reward the agent for reaching the target
     void OnTriggerEnter(Collider other)
     {
         if (other.TryGetComponent<Goal>(out Goal goal))

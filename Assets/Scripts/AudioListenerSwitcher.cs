@@ -1,6 +1,14 @@
 using System.Collections;
 using UnityEngine;
 
+/// <summary>
+/// Only one AudioListenerSwitcher should be present in the scene.
+/// This script switches between AudioListeners, enabling one at a time and,
+/// storing the audio data in AudioMemory components attached to the AudioListeners.
+/// 
+/// The script assumes that all the AudioListener components are attached to GameObjects
+/// that also have AudioMemory components.
+/// </summary>
 public class AudioListenerSwitcher : MonoBehaviour
 {
     private AudioListener[] _audioListeners;

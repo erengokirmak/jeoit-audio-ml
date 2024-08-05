@@ -1,8 +1,8 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This script stores the audio data from the AudioListener component.
+/// </summary>
 public class AudioMemory : MonoBehaviour
 {
     public float[] AudioMemoryLeft = new float[1024];
