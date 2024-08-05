@@ -1,10 +1,8 @@
 using System;
 using System.Linq;
-using Unity.Mathematics;
 using Unity.MLAgents;
 using Unity.MLAgents.Actuators;
 using Unity.MLAgents.Sensors;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class AuditoryAgent : Agent
@@ -25,21 +23,26 @@ public class AuditoryAgent : Agent
 
     public override void OnActionReceived(ActionBuffers actions)
     {
-        float move = actions.ContinuousActions[0];
+        float motion = actions.ContinuousActions[0];
         float rotation = actions.ContinuousActions[1];
 
-        transform.position += transform.forward * Time.deltaTime * move * 5f;
+        transform.position += transform.forward * Time.deltaTime * motion * 5f;
         transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles + new Vector3(0, rotation * 3, 0));
         float distanceToTarget = Vector3.Distance(transform.localPosition, _targetTransform.localPosition);
+
+        // Punish the agent for being far from the target (also punishes the agent for excessive movement)
         AddReward(-distanceToTarget * Time.deltaTime);
     }
 
     public override void Heuristic(in ActionBuffers actionsOut)
     {
         ActionSegment<float> continuousActions = actionsOut.ContinuousActions;
+
+        // Forward and backward movement
         continuousActions[0] = Input.GetAxis("Vertical");
+
+        // Rotation
         continuousActions[1] = Input.GetAxis("Horizontal");
-        continuousActions[2] = 0;
     }
 
     public override void CollectObservations(VectorSensor sensor)

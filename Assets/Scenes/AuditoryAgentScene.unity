@@ -472,6 +472,101 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrainingEnvironment
       objectReference: {fileID: 0}
+    - target: {fileID: 3907278025217131819, guid: b3deba7130af24cd39d2b922d78f6ef5,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3907278025217131819, guid: b3deba7130af24cd39d2b922d78f6ef5,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4463125451712367838, guid: b3deba7130af24cd39d2b922d78f6ef5,
+        type: 3}
+      propertyPath: pathing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4463125451712367838, guid: b3deba7130af24cd39d2b922d78f6ef5,
+        type: 3}
+      propertyPath: occlusion
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4463125451712367838, guid: b3deba7130af24cd39d2b922d78f6ef5,
+        type: 3}
+      propertyPath: transmission
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4463125451712367838, guid: b3deba7130af24cd39d2b922d78f6ef5,
+        type: 3}
+      propertyPath: airAbsorption
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4463125451712367838, guid: b3deba7130af24cd39d2b922d78f6ef5,
+        type: 3}
+      propertyPath: occlusionType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4463125451712367838, guid: b3deba7130af24cd39d2b922d78f6ef5,
+        type: 3}
+      propertyPath: occlusionInput
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4463125451712367838, guid: b3deba7130af24cd39d2b922d78f6ef5,
+        type: 3}
+      propertyPath: transmissionType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4463125451712367838, guid: b3deba7130af24cd39d2b922d78f6ef5,
+        type: 3}
+      propertyPath: distanceAttenuation
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4463125451712367838, guid: b3deba7130af24cd39d2b922d78f6ef5,
+        type: 3}
+      propertyPath: applyHRTFToReflections
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4463125451712367838, guid: b3deba7130af24cd39d2b922d78f6ef5,
+        type: 3}
+      propertyPath: maxTransmissionSurfaces
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4463125451712367838, guid: b3deba7130af24cd39d2b922d78f6ef5,
+        type: 3}
+      propertyPath: distanceAttenuationInput
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4955507186336181669, guid: b3deba7130af24cd39d2b922d78f6ef5,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 4955507186336181669, guid: b3deba7130af24cd39d2b922d78f6ef5,
+        type: 3}
+      propertyPath: MinDistance
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4955507186336181669, guid: b3deba7130af24cd39d2b922d78f6ef5,
+        type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5584286665061541342, guid: b3deba7130af24cd39d2b922d78f6ef5,
+        type: 3}
+      propertyPath: m_BrainParameters.VectorActionSize.Array.data[0]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5584286665061541342, guid: b3deba7130af24cd39d2b922d78f6ef5,
+        type: 3}
+      propertyPath: m_BrainParameters.m_ActionSpec.m_NumContinuousActions
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5669092905079141821, guid: b3deba7130af24cd39d2b922d78f6ef5,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7e540a0f2f1f84cbb9b0d8deac69f8c1, type: 2}
     - target: {fileID: 6434201782301979151, guid: b3deba7130af24cd39d2b922d78f6ef5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -522,7 +617,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7450341661568756872, guid: b3deba7130af24cd39d2b922d78f6ef5, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
